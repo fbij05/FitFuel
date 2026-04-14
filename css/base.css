@@ -1,5 +1,6 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css");
 
 * {
     padding: 0;
@@ -19,4 +20,28 @@
     --border-color:#6666662a;
     --name-item:#1818b8;
     --darkgray-color:#565656;
+}
+
+.comment {
+    opacity: 0.7;
+}
+
+.error {
+    color: white;
+    background-color: #C5343B;
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1em;
+}
+
+.error::before {
+    content: "\f057";
+    font-family: "Font Awesome 7 Free";
+    font-size: 2em;
+    font-weight: 900;
+    margin: 0 4px;
 }

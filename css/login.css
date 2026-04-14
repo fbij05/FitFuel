@@ -10,11 +10,49 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    flex-direction: column;
+}
+
+header #logo {
+    max-width: 400px;
 }
 
 #login-block {
     background-color: var(--white-color);
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     border-radius: 4px;
     padding: 16px;
+}
+
+#login-block fieldset {
+    border: none;
+}
+
+#login-form legend {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#login-form input {
+    display: block;
+    width: 100%;
+    padding: 0.4em;
+    font-size: 1.2em;
+    border-radius: 4px;
+    border: 2px solid var(--border-color);
+    margin: 0.2em 0 2em 0;
+}
+
+#login-form label {
+
+}
+
+#login-form #login-button {
+    width: 70%;
+    margin: 1em auto;
+}
+
+footer {
+    color: white;
 }
