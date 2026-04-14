@@ -58,7 +58,7 @@ header{
     left: 0;
     right: 0;
     background: #611620;
-
+    z-index: 999;
 }
 .logo img{
     width: 250px;
