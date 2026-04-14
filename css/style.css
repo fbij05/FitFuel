@@ -1,40 +1,8 @@
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
-*{
+@import "base.css";
 
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Rubik' , sans-serif;
-
-}
-
-:root{
-
-    --main-color: #611620;
-    --white-color:#ffffff;
-    --dark-color: #222222;
-    --gray-color: #c7c7c7;
-    --dark-red: #d30000;
-    --border-color:#6666662a;
-    --name-item:#1818b8;
-    --darkgray-color:#565656;
-}
-
-body{
-
+body {
     background: #f5f6f9;
     margin-top: 180px;
-}
-
-h1,h2,h3,h4,h5,h6{
-    color: var(--dark-color);
-}
-
-p{
-    color: var(--gray-color);
 }
 
 .container{
