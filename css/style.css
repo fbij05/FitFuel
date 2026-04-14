@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
 *{
 
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-text-decoration: none;
-list-style: none;
-font-family: 'Rubik' , sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Rubik' , sans-serif;
 
 }
 
@@ -43,9 +43,9 @@ p{
 }
 @media (max-width:1500px) {
     .container{
-    width: 90%;
-    
-}
+        width: 90%;
+
+    }
 }
 
 
@@ -164,19 +164,19 @@ header .links ul li a{
     font-weight: 500;
     font-size: 15px;
 }
-header .links ul li{ 
+header .links ul li{
     position: relative;
     padding: 20px 0;
 }
-header .links ul li::after{ 
-   content: ' ';
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 0%;
-   height: 2px;
-   background: var(--main-color);
-   transition: 0.3s ease-in-out;
+header .links ul li::after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    transition: 0.3s ease-in-out;
 }
 header .links ul li.active::after,
 header .links ul li:hover::after{
@@ -191,7 +191,7 @@ header .links .login_signup a{
     border-radius: 5px;
 }
 
-/*end of the heder*/ 
+/*end of the heder*/
 
 
 /*Cart*/
@@ -205,10 +205,10 @@ header .links .login_signup a{
     z-index: 1100;
     padding: 30px;
     border-left: 1px solid var(--border-color);
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     transition: 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.7s ease;
 }
 .cart.active{
     right: 0;
@@ -314,6 +314,8 @@ header .links .login_signup a{
     color: var(--white-color);
 }
 
+/* end of the cart */
+
 #product-list {
     display: flex;
     gap: 10px;
@@ -383,6 +385,40 @@ header .links .login_signup a{
     margin: 0 4px;
 }
 
+#product-list .product-item {
+    display: grid;
+    grid-template-areas: "images" "meta";
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#product-list .product-item:hover {
+    transform: scale(1.05);
+}
+
+#product-list .product-item .images img {
+    height: 200px;
+    transition: transform 0.3s ease;
+}
+
+#product-list .product-item:hover .images img {
+    transform: scale(1.1);
+}
+
+#product-list .product-item .metadata .name {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#product-list .product-item:hover .metadata .name {
+    color: var(--main-color);
+    text-decoration: underline;
+}
 @media only screen and (max-width: 1280px) {
     #product-list .product-item {
         width: unset;
