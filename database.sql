@@ -41,3 +41,21 @@ CREATE TABLE order_items (
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+
+INSERT INTO categories (category_name) VALUES
+('Protein'),
+('Supplements');
+
+INSERT INTO products (name, description, price, stock, rating, image, category_id) VALUES
+('Whey Protein Powder', 'High quality whey protein for muscle growth', 250.00, 15, 4.5, 'whey protein powder.jpg', 1),
+('ISO100 Hydrolyzed', 'Fast absorbing protein isolate', 260.00, 10, 4.7, 'Proteína.jpg', 1);
+
+INSERT INTO admins (username, password) VALUES
+('admin', 'admin123');
+
+INSERT INTO orders (total_amount, status) VALUES
+(510.00, 'Pending');
+
+INSERT INTO order_items (order_id, product_id, quantity, unit_price, item_total) VALUES
+(1, 1, 1, 250.00, 250.00),
+(1, 2, 1, 260.00, 260.00);
