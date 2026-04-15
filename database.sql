@@ -85,18 +85,18 @@ INSERT INTO categories (category_name) VALUES
 
 
 INSERT INTO products (name, description, price, stock, rating, image, category_id) VALUES
-('Whey Protein Powder', 'High quality whey protein for muscle growth', 250.00, 15, 4.5, 'whey.jpg', 1),
-('ISO100 Hydrolyzed', 'Fast absorbing protein isolate', 260.00, 10, 4.7, 'iso100.jpg', 1),
-('Mass Gainer', 'Helps in weight gain and muscle mass', 300.00, 8, 4.3, 'gainer.jpg', 1),
+('Whey Protein Powder', 'High quality whey protein for muscle growth', 250.00, 15, 4.5, 'whey.png', 1),
+('ISO100 Hydrolyzed', 'Fast absorbing protein isolate', 260.00, 10, 4.7, 'iso100.png', 1),
+('Mass Gainer', 'Helps in weight gain and muscle mass', 300.00, 8, 4.3, 'gainer.png', 1),
 
-('Creatine Monohydrate', 'Increased strength and energy', 120.00, 20, 4.6, 'creatine.jpg', 2),
-('BCAA Amino Acids', 'Recovery support supplement', 150.00, 18, 4.4, 'bcaa.jpg', 2),
+('Creatine Monohydrate', 'Increased strength and energy', 120.00, 20, 4.6, 'creatine.png', 2),
+('BCAA Amino Acids', 'Recovery support supplement', 150.00, 18, 4.4, 'bcaa.png', 2),
 
-('Vitamin D3', 'Supports bone health', 80.00, 25, 4.2, 'vitd.jpg', 3),
-('Multivitamin', 'Daily essential vitamins', 90.00, 30, 4.3, 'multi.jpg', 3),
+('Vitamin D3', 'Supports bone health', 80.00, 25, 4.2, 'vitd.png', 3),
+('Multivitamin', 'Daily essential vitamins', 90.00, 30, 4.3, 'multi.png', 3),
 
-('Shaker Bottle', 'Mix your protein easily', 25.00, 50, 4.1, 'shaker.jpg', 4),
-('Gym Gloves', 'Protect your hands while lifting', 40.00, 35, 4.2, 'gloves.jpg', 4);
+('Shaker Bottle', 'Mix your protein easily', 25.00, 50, 4.1, 'shaker.png', 4),
+('Gym Gloves', 'Protect your hands while lifting', 40.00, 35, 4.2, 'gloves.png', 4);
 
 
 
