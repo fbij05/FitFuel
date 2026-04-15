@@ -45,6 +45,8 @@ main {
     margin: 16px;
     gap: 16px;
     height: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 
 nav#sidebar, section#content {
@@ -81,24 +83,29 @@ nav#sidebar ul li a:link, nav#sidebar ul li a:visited {
 
 section#content {
     flex: 1 1 100%;
+    min-width: 0;
     padding: 1em;
+    border-radius: 4px;
+    overflow-y: auto;
 }
 
 section#content h1 {
     margin: 0.4em 0 1em 0;
 }
 
-section#content {
-    border-radius: 4px;
+section#content div {
+    overflow-y: auto;
 }
 
 section#content table {
     background-color: white;
     padding: 1em;
     border: 1px solid var(--border-color);
-    width: 100%;
     border-radius: 4px;
     border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;          /* expand to fill container */
+    min-width: 1000px;     /* stop shrinking at this point — adjust as needed */
 }
 
 section#content #account-details tr:nth-child(2n) {
@@ -117,10 +124,6 @@ section#content #account-details th {
     text-align: right;
     padding-right: 1em;
     border-right: 1px solid var(--border-color);
-}
-
-#products-table, #orders-table {
-    overflow-x: scroll;
 }
 
 section#content #products-table tr:nth-child(2n) {
@@ -145,6 +148,14 @@ section#content #products-table img {
     display: block;
     border-radius: 4px;
     object-fit: cover;
+}
+
+#products-table th:nth-child(5),
+#products-table td:nth-child(5) {
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 section#content #orders-table tr:nth-child(2n) {

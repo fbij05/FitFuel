@@ -9,8 +9,8 @@ $result = mysqli_query($db, $query);
 
 <h1>Orders</h1>
 
-<div id="orders-table">
-    <table>
+<div>
+    <table id="orders-table">
         <thead>
         <tr>
             <th>#</th>
