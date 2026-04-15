@@ -1,16 +1,11 @@
 <?php
-session_start();
+require "tools/db.php";
 
-define("DATABASE_LOCAL", "127.0.0.1");
-define("DATABASE_USER", "fitfuel");
-define("DATABASE_PASSWD", "password");
-define("DATABASE_NAME", "fitfuel_db");
+session_start();
 
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $db = mysqli_connect(DATABASE_LOCAL, DATABASE_USER, DATABASE_PASSWD, DATABASE_NAME);
-
     $username = $_POST["username"];
     $password = $_POST["password"];
 
