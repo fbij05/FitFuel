@@ -541,3 +541,136 @@ body {
     background-color: var(--main-color); 
     color: var(--white-color); 
 }
+
+
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Checkout Page Styles */
+.checkout-container {
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+/* Cart Items */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.cart-item img {
+    width: 100px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    color: var(--dark-color);
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.cart-price {
+    color: #611620;  
+}
+
+.cart-item-info .quantity {
+    color: #333;  
+}
+
+.cart-item-info p {
+    color: var(--dark-color);
+    margin: 5px 0;
+}
+
+.quantity {
+    width: 50px;
+}
+
+/* Checkout Summary */
+.checkout-summary {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.checkout-summary p {
+    color: var(--dark-color);
+    margin: 5px 0;
+}
+
+/* Shipping Address */
+.shipping-address {
+    margin-top: 40px;
+}
+
+.shipping-address h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.shipping-address form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.shipping-address form input:focus {
+    border-color: var(--main-color); 
+}
+
+/* Checkout Button */
+.checkout-button-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.delete-btn, .delete-all-btn, .buy-btn {
+    background-color: var(--main-color); 
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: var(--main-color); 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover, .delete-all-btn:hover, .buy-btn:hover {
+    background-color: var(--white-color);
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+
+/* Buttons for "Delete All" and "Buy Now" */
+.delete-all-btn {
+    background-color: #d30000;  /* Red button */
+}
+
+.buy-btn {
+    background-color: #00af26; 
+    border: #00af26;
+    text-decoration: none;
+    padding: 12px 25px;
+    display: inline-block;
+}
