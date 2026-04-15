@@ -27,7 +27,7 @@ button {
 }
 
 button#logout::before {
-    content: "\f057";
+    content: "\f08b";
     font-family: "Font Awesome 7 Free";
     font-weight: 900;
     margin-right: 8px;
@@ -89,7 +89,7 @@ section#content {
     overflow-y: auto;
 }
 
-section#content h1 {
+section#content #contents-text {
     margin: 0.4em 0 1em 0;
 }
 
@@ -165,6 +165,52 @@ section#content #products-table img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+#items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#items-management, #items-actions {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+}
+
+#items-search input {
+    padding: 0.8em 1em;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+#items-management button {
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+#items-management button::before {
+    content: "\f057";
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+#items-management #add::before {
+    content: "\f055";
+}
+
+#items-management #modify::before {
+    content: "\f304";
+}
+
+#items-management #remove::before {
+    content: "\f2ed";
 }
 
 section#content #orders-table tr:nth-child(2n) {
