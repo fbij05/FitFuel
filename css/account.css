@@ -88,11 +88,11 @@ section#content h1 {
     margin-bottom: 1em;
 }
 
-section#content #account-details {
+section#content {
     border-radius: 4px;
 }
 
-section#content #account-details table {
+section#content table {
     background-color: white;
     padding: 1em;
     border: 1px solid var(--border-color);
@@ -119,6 +119,34 @@ section#content #account-details th {
     border-right: 1px solid var(--border-color);
 }
 
+#products-table {
+    overflow-x: scroll;
+}
+
+section#content #products-table tr:nth-child(2n) {
+    background-color: var(--lightgray-color);
+}
+
+section#content #products-table td, section#content #products-table th {
+    padding: 0.75em 1em;
+}
+
+section#content #products-table th {
+    text-align: left;
+    border-bottom: 2px solid var(--border-color);
+    background-color: var(--lightgray-color);
+}
+
+section#content #products-table td {
+    border-bottom: 1px solid var(--border-color);
+}
+
+section#content #products-table img {
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
 @media only screen and (max-width: 800px) {
     main {
         flex-direction: column;
@@ -128,5 +156,6 @@ section#content #account-details th {
     }
     section#content {
         flex-grow: 1;
+        margin-bottom: 2em;
     }
 }
