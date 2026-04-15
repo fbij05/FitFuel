@@ -1,2 +1,96 @@
 @import "base.css";
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    color: white;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+}
+
+button {
+    padding: 0.6em 0.8em;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+button#logout::before {
+    content: "\f057";
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+#corner-details {
+    display: flex;
+    align-items: center;
+    gap: 0 1.2em;
+}
+
+main {
+    display: flex;
+    margin: 16px;
+    gap: 16px;
+    height: 100%;
+}
+
+nav#sidebar, section#content {
+    border-radius: 4px;
+    background-color: var(--lightgray-color);
+}
+
+section#content {
+    flex: 1 1 100%;
+}
+
+nav#sidebar {
+    flex: 0 0 300px;
+}
+
+nav#sidebar ul li {
+    margin: 4px;
+    background-color: white;
+}
+nav#sidebar ul li:first-child {
+    border-radius: 2px 2px 0 0;
+}
+
+nav#sidebar ul li:last-child {
+    border-radius: 0 0 2px 2px;
+}
+
+nav#sidebar ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+}
+
+nav#sidebar ul li a:link, nav#sidebar ul li a:visited {
+    color: var(--main-color);
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+    nav#sidebar, section#content {
+        flex: unset;
+    }
+    section#content {
+        flex-grow: 1;
+    }
+}
