@@ -104,15 +104,16 @@ section#content table {
     border-radius: 4px;
     border-collapse: collapse;
     table-layout: fixed;
-    width: 100%;          /* expand to fill container */
-    min-width: 1000px;     /* stop shrinking at this point — adjust as needed */
+    width: 100%;
+    min-width: 1000px;
 }
 
+/* Account details table */
 section#content #account-details tr:nth-child(2n) {
     background-color: var(--lightgray-color);
 }
 
-section#content #account-details td, section#content #account-details  th {
+section#content #account-details td, section#content #account-details th {
     padding: 1em 0;
 }
 
@@ -126,6 +127,7 @@ section#content #account-details th {
     border-right: 1px solid var(--border-color);
 }
 
+/* Products table */
 section#content #products-table tr:nth-child(2n) {
     background-color: var(--lightgray-color);
 }
@@ -149,7 +151,7 @@ section#content #products-table img {
     border-radius: 4px;
     object-fit: cover;
 }
-/* shorten ID lenght*/
+
 #products-table th:nth-child(1),
 #products-table td:nth-child(1) {
     width: 4ch;
@@ -158,7 +160,6 @@ section#content #products-table img {
     text-overflow: ellipsis;
 }
 
-/* give descriptions more breathing room */
 #products-table th:nth-child(5),
 #products-table td:nth-child(5) {
     width: 30%;
@@ -167,6 +168,24 @@ section#content #products-table img {
     text-overflow: ellipsis;
 }
 
+/* Row selection */
+#products-table tbody tr[data-id] {
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+#products-table tbody tr[data-id]:hover {
+    background-color: #e8e8e8;
+}
+
+#products-table tbody tr.selected,
+#products-table tbody tr.selected:hover {
+    background-color: #f0d0d4;
+    outline: 2px solid var(--main-color);
+    outline-offset: -2px;
+}
+
+/* Items header & buttons */
 #items-header {
     display: flex;
     justify-content: space-between;
@@ -191,6 +210,11 @@ section#content #products-table img {
     background-color: var(--main-color);
     border-radius: 4px;
     border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+#items-management button:hover {
+    opacity: 0.85;
 }
 
 #items-management button::before {
@@ -213,6 +237,166 @@ section#content #products-table img {
     content: "\f2ed";
 }
 
+/* Success message */
+.success-msg {
+    color: white;
+    background-color: #2e7d32;
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1em;
+}
+
+.success-msg::before {
+    content: "\f058";
+    font-family: "Font Awesome 7 Free";
+    font-size: 2em;
+    font-weight: 900;
+    margin: 0 4px;
+}
+
+/* Modal overlay & box */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    border-radius: 8px;
+    width: 540px;
+    max-width: 92vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2em;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.modal.modal-small {
+    width: 400px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.25em;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--darkgray-color);
+    padding: 0;
+}
+
+.modal-header .modal-close {
+    font-size: 1.5em;
+}
+
+/* Form styles inside modals */
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.35em;
+    font-weight: 500;
+    color: var(--dark-color);
+    font-size: 0.9em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7em 0.8em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 1em;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75em;
+    margin-top: 1.5em;
+}
+
+button.cancel {
+    background: white;
+    color: var(--darkgray-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.7em 1.2em;
+    cursor: pointer;
+}
+
+button.confirm {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7em 1.2em;
+    cursor: pointer;
+}
+
+button.confirm:hover {
+    opacity: 0.85;
+}
+
+button.danger {
+    background-color: var(--dark-red);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7em 1.2em;
+    cursor: pointer;
+}
+
+button.danger:hover {
+    opacity: 0.85;
+}
+
+#delete-message {
+    margin-bottom: 0.5em;
+    color: var(--dark-color);
+}
+
+/* orders table */
 section#content #orders-table tr:nth-child(2n) {
     background-color: var(--lightgray-color);
 }
@@ -231,6 +415,8 @@ section#content #orders-table td {
     border-bottom: 1px solid var(--border-color);
 }
 
+
+/* style for smaller screens */
 @media only screen and (max-width: 800px) {
     main {
         flex-direction: column;
@@ -241,5 +427,13 @@ section#content #orders-table td {
     section#content {
         flex-grow: 1;
         margin-bottom: 2em;
+    }
+    .modal {
+        width: 95vw;
+        padding: 1.5em;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
     }
 }
