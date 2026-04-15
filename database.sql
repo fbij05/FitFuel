@@ -54,6 +54,17 @@ CREATE TABLE order_items (
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
+CREATE VIEW admin_login_view AS
+SELECT 
+    admins.admin_id,
+    admins.username,
+    users.password,
+    users.full_name,
+    users.email,
+    users.phone
+FROM admins
+JOIN users ON admins.user_id = users.user_id;
+
 INSERT INTO users (full_name, email, password, phone, address) VALUES
 ('System Admin', 'admin@fitfuel.com', 'admin123', '0500000000', 'Riyadh'),
 ('Ahmed Ali', 'ahmed@gmail.com', 'user123', '0555555555', 'Jeddah'),
