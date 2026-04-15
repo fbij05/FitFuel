@@ -2,7 +2,7 @@
 $query = "SELECT products.*, categories.category_name 
           FROM products 
           JOIN categories ON products.category_id = categories.category_id
-          ORDER BY categories.category_name, products.name";
+          ORDER BY products.product_id ASC";
 
 $result = mysqli_query($db, $query);
 ?>
@@ -27,7 +27,7 @@ $result = mysqli_query($db, $query);
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
             <tr>
                 <td><?= $row["product_id"] ?></td>
-                <td><img src="images/<?= htmlspecialchars($row["image"]) ?>" width="60"></td>
+                <td><img src="../../img/<?= htmlspecialchars($row["image"]) ?>" width="60"></td>
                 <td><?= htmlspecialchars($row["name"]) ?></td>
                 <td><?= htmlspecialchars($row["category_name"]) ?></td>
                 <td><?= htmlspecialchars($row["description"]) ?></td>
