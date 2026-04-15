@@ -515,7 +515,13 @@ body {
 /* Checkout Button */
 .checkout-button-container {
     width: 100%; 
-    margin-top: 20px;  
+    margin-top: 10px;
+}
+
+.checkout-button-container a {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
 }
 
 .btn_cart {
