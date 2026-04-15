@@ -149,7 +149,16 @@ section#content #products-table img {
     border-radius: 4px;
     object-fit: cover;
 }
+/* shorten ID lenght*/
+#products-table th:nth-child(1),
+#products-table td:nth-child(1) {
+    width: 4ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+/* give descriptions more breathing room */
 #products-table th:nth-child(5),
 #products-table td:nth-child(5) {
     width: 30%;
