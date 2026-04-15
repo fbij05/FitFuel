@@ -9,7 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $query = "SELECT * FROM admins WHERE username='$username' AND password='$password'";
+    $query = "SELECT * FROM admin_login_view 
+          WHERE username='$username' 
+          AND password='$password'";
     $result = mysqli_query($db, $query);
 
     if (mysqli_num_rows($result) == 1) {

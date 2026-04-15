@@ -32,7 +32,7 @@ if (!isset($_SESSION["user_id"])) {
             <ul>
                 <li><a href="account.php?show=items">Items</a></li>
                 <li><a href="account.php?show=orders">Orders</a></li>
-                <li><a href="account.php?show=account">Accounts</a></li>
+                <li><a href="account.php?show=account">Account Details</a></li>
 
             </ul>
         </nav>
@@ -41,10 +41,10 @@ if (!isset($_SESSION["user_id"])) {
                 if(isset($_GET['show'])) {
                     switch ($_GET['show']) {
                         case 'items':
-                            include "tools/product_list.php";
+                            include "tools/items_list.php";
                             break;
                         case 'orders':
-                            include "tools/order_list.php";
+                            include "tools/orders_list.php";
                             break;
                         case 'account':
                             include "tools/account_details.php";
