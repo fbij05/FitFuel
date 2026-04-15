@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($result);
         $_SESSION["user_id"] = $row["admin_id"];
         $_SESSION["username"] = $row["username"];
+        $_SESSION["fullname"] = $row["full_name"];
         header("Location: account.php");
         exit();
     } else {
@@ -53,7 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <input type="submit" id="login-button" value="Login">
             </fieldset>
-            <i class="comment">To create an account, please visit management.</i>
         </form>
     </main>
     <footer>

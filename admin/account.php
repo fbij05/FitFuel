@@ -21,16 +21,19 @@ if (!isset($_SESSION["user_id"])) {
     <header>
         <img src="../img/logo.png" alt="fitfuel logo" height="60">
         <span id="corner-details">
-            <span id="logged-name"><?php echo $_SESSION["username"]?></span>
-            <button id="logout">Logout</button>
+            <span id="logged-name">Welcome, <?php echo $_SESSION["username"]?></span>
+            <form method="post" action="logout.php" id="logout-form">
+                <button type="submit" id="logout">Logout</button>
+            </form>
         </span>
     </header>
     <main>
         <nav id="sidebar">
             <ul>
                 <li><a href="account.php?show=items">Items</a></li>
-                <li><a href="account.php?show=account">Account</a></li>
-                <li><a href="account.php?show=contact">Contact</a></li>
+                <li><a href="account.php?show=orders">Orders</a></li>
+                <li><a href="account.php?show=account">Accounts</a></li>
+
             </ul>
         </nav>
         <section id="content">
@@ -40,11 +43,12 @@ if (!isset($_SESSION["user_id"])) {
                         case 'items':
                             include "tools/product_list.php";
                             break;
+                        case 'orders':
+                            include "tools/order_list.php";
+                            break;
                         case 'account':
                             include "tools/account_details.php";
                             break;
-                        case 'contact':
-                            include "includes/contact.html";
                         default:
                             break;
                     }
