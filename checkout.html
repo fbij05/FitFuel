@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="container top-nav">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+
+        <form action="" class="search">
+            <input type="search" placeholder="Search for products...">
+            <button type="submit">Search</button>
+        </form>
+
+        <div class="cart_header">
+            <div onclick="window.location.href='checkout.html'" class="icon_cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="count_item">0</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container checkout-container">
+        <h2>Checkout</h2>
+
+        <!-- Cart Items List -->
+        <div class="cart-items">
+            <!-- First product (Example Item) -->
+            <div class="cart-item">
+                <img src="img/Proteína.jpg" alt="Product">
+                <div class="cart-item-info">
+                    <h4>Example Item</h4>
+                    <p class="cart-price">Price: $250</p>
+                    <input type="number" value="1" min="1" max="10" class="quantity">
+                    <p class="total-price">Total: $250</p>
+                    <!-- Delete button -->
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+
+            <!-- Second product (Whey Protein Powder) -->
+            <div class="cart-item">
+                <img src="img/whey protein powder.jpg" alt="Whey Protein Powder">
+                <div class="cart-item-info">
+                    <h4>Whey Protein Powder</h4>
+                    <p class="cart-price">SAR 250</p>
+                    <input type="number" value="1" min="1" max="10" class="quantity">
+                    <p class="total-price">Total: SAR 250</p>
+                    <!-- Delete button -->
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subtotal and Total Price -->
+        <div class="checkout-summary">
+            <div class="subtotal">
+                <p>Subtotal:</p>
+                <p>SAR 500</p>
+            </div>
+            <div class="shipping">
+                <p>Shipping:</p>
+                <p>SAR 20</p>
+            </div>
+            <div class="total">
+                <p>Total:</p>
+                <p>SAR 520</p>
+            </div>
+        </div>
+
+        <!-- Shipping Address Form -->
+        <div class="shipping-address">
+            <h3>Shipping Address</h3>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Street Address" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="State/Province" required>
+                <input type="text" placeholder="Postal Code" required>
+                <input type="text" placeholder="Country" required>
+            </form>
+        </div>
+
+        <!-- Buttons for Delete All and Buy -->
+        <div class="actions">
+            <button class="delete-all-btn">Delete All</button> <!-- Delete All Button -->
+            <a href="payment.html" class="buy-btn">Buy Now</a> <!-- Buy Button -->
+        </div>
+    </div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
