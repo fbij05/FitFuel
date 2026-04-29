@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitFuel - Contact Us</title>
+
+
+    <!-- css f -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font aws -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+
+    <style>
+        #contact {
+            max-width: 1000px;
+            margin: 12em auto;
+
+            h1 {
+                text-align: center;
+            }
+        }
+        address {
+            display: flex;
+            flex-direction: row;
+            margin-top: 2em;
+            gap: 2em;
+            justify-content: left;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<header>
+    <div class="container top-nav">
+        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+
+        <form action="" class="search">
+            <input type="search" placeholder="Search for a products...">
+            <button type="submit">Search</button>
+
+        </form>
+
+        <div class="cart_header">
+            <div onclick="open_cart()" class="icon_cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="count_item">0</span>
+            </div>
+            <div class="tottal_price">
+                <p>My cart</p>
+                <p class="price_cart_head">SAR 0</p>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="links container">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">All product</a></li>
+                <li><a href="">About us</a></li>
+                <li class="active"><a href="">Contact</a></li>
+            </ul>
+
+            <div class="login_signup">
+                <a href="#">login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                <a href="#">signup <i class="fa-solid fa-user-plus"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="cart">
+    <div class="top_cart">
+        <h3>My Cart <span>(oItem in Cart)</span></h3>
+        <span onclick="close_cart()" class="close_cart"><i class="fa-solid fa-x"></i></span>
+    </div>
+
+    <div class="items_in_cart">
+        <div class="cart_item">
+            <img src="img/whey protein powder.jpg" alt="">
+            <div class="content">
+                <h4>Whey Protein Powder</h4>
+                <p class="cart_price">SAR 250</p>
+            </div>
+            <BUtton class="delet_item"><i class="fa-solid fa-trash-can"></i></BUtton>
+        </div>
+
+        <div class="cart_item">
+            <img src="img/Proteína.jpg" alt="">
+            <div class="content">
+                <h4>ISO100 Hydrolyzed</h4>
+                <p class="cart_price">SAR 260</p>
+            </div>
+            <BUtton class="delet_item"><i class="fa-solid fa-trash-can"></i></BUtton>
+        </div>
+    </div>
+
+    <div class="bottom_cart">
+        <div class="total">
+            <p>Cart subtotal</p>
+            <p class="price_cart_total">$0</p>
+        </div>
+
+        <div class="cart_button">
+            <a href="#" class="btn_cart">Proceed to checkout</a>
+            <button class="btn_cart tranc_bg">Shop more</button>
+        </div>
+    </div>
+</div>
+
+<main id="contact">
+    <h1>Contact Us!</h1>
+    <address>
+        <div class="map">
+            <iframe width="750" height="500" src="https://maps.google.com/maps?width=650&height=400&hl=en&q=Riyadh&t=&z=14&ie=UTF8&iwloc=B&output=embed" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="details">
+            <ul>
+                <li>Email: <a href="mailto:000@000">support@fitfuel.com</a></li>
+                <li>Phone: <a href="mailto:000@000">+966 11 234 5678</a></li>
+                <li>WhatsApp: <a href="mailto:000@000">+966 50 123 4567</a></li>
+                <br>
+                <li>
+                    <span>Address: King Fahd Road, Al Olaya District, Riyadh 12345, Saudi Arabia</span>
+                </li>
+                <br>
+                <li>
+                    <span>Working hours:<br>Sun-Thu 9:00 AM - 10:00 PM <br> Fri-Sat 2:00 PM - 10:00 PM</span>
+                </li>
+                <br>
+                <li>
+                    <span>Social media: @FitFuel (Twitter/X, Instagram, Snapchat)</span>
+                </li>
+            </ul>
+        </div>
+    </address>
+</main>
+
+</body>
+</html>
