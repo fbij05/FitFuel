@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFuel</title>
+
+
+    <!-- css f -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font aws -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    
+</head>
+<body>
+
+    <?php include "includes/header.html" ?>
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>My Cart <span>(oItem in Cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-solid fa-x"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+            <div class="cart_item">
+                <img src="img/whey.jpg" alt="">
+                <div class="content">
+                    <h4>Whey Protein Powder</h4>
+                    <p class="cart_price">SAR 250</p>
+                </div>
+                <BUtton class="delet_item"><i class="fa-solid fa-trash-can"></i></BUtton>
+            </div>
+
+             <div class="cart_item">
+                <img src="img/iso100.jpg" alt="">
+                <div class="content">
+                    <h4>ISO100 Hydrolyzed</h4>
+                    <p class="cart_price">SAR 260</p>
+                </div>
+                <BUtton class="delet_item"><i class="fa-solid fa-trash-can"></i></BUtton>
+            </div>
+        </div>
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+
+            <div class="cart_button">
+                <a href="#" class="btn_cart">Proceed to checkout</a>
+                <button class="btn_cart tranc_bg">Shop more</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="product-list">
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+        <div class="product-item">
+            <div class="images">
+                <img src="img/iso100.jpg" alt="">
+            </div>
+            <div class="metadata">
+                <span class="name">Example Item</span>
+                <span class="price">$250</span>
+                <span class="rating">4.3</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

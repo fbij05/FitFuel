@@ -35,47 +35,7 @@
 </head>
 <body>
 
-
-
-
-<header>
-    <div class="container top-nav">
-        <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-
-        <form action="" class="search">
-            <input type="search" placeholder="Search for a products...">
-            <button type="submit">Search</button>
-
-        </form>
-
-        <div class="cart_header">
-            <div onclick="open_cart()" class="icon_cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="count_item">0</span>
-            </div>
-            <div class="tottal_price">
-                <p>My cart</p>
-                <p class="price_cart_head">SAR 0</p>
-            </div>
-        </div>
-    </div>
-
-    <nav>
-        <div class="links container">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">All product</a></li>
-                <li><a href="">About us</a></li>
-                <li class="active"><a href="">Contact</a></li>
-            </ul>
-
-            <div class="login_signup">
-                <a href="#">login <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                <a href="#">signup <i class="fa-solid fa-user-plus"></i></a>
-            </div>
-        </div>
-    </nav>
-</header>
+<?php include "includes/header.html" ?>
 
 <div class="cart">
     <div class="top_cart">
