@@ -106,7 +106,7 @@ while ($cat = mysqli_fetch_assoc($categories_result)) {
             <h2>Add Product</h2>
             <button type="button" class="modal-close">&times;</button>
         </div>
-        <form method="post" action="handle_product.php" enctype="multipart/form-data">
+        <form method="post" action="tools/handle_product.php" enctype="multipart/form-data">
             <input type="hidden" name="action" value="add">
             <div class="form-group">
                 <label for="add-name">Name</label>
@@ -154,7 +154,7 @@ while ($cat = mysqli_fetch_assoc($categories_result)) {
             <h2>Modify Product</h2>
             <button type="button" class="modal-close">&times;</button>
         </div>
-        <form method="post" action="handle_product.php" enctype="multipart/form-data">
+        <form method="post" action="tools/handle_product.php" enctype="multipart/form-data">
             <input type="hidden" name="action" value="edit">
             <input type="hidden" name="product_id" id="edit-id">
             <div class="form-group">
@@ -205,7 +205,7 @@ while ($cat = mysqli_fetch_assoc($categories_result)) {
             <button type="button" class="modal-close">&times;</button>
         </div>
         <p id="delete-message">Are you sure you want to delete this product?</p>
-        <form method="post" action="handle_product.php">
+        <form method="post" action="tools/handle_product.php">
             <input type="hidden" name="action" value="delete">
             <input type="hidden" name="product_id" id="delete-id">
             <div class="form-actions">
