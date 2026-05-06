@@ -109,6 +109,10 @@ section#content table {
 }
 
 /* Account details table */
+section#content #account-details table {
+    min-width: unset;
+}
+
 section#content #account-details tr:nth-child(2n) {
     background-color: var(--lightgray-color);
 }
@@ -128,6 +132,15 @@ section#content #account-details th {
 }
 
 /* Products table */
+section#content #items-header {
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+section#content #items-header #items-actions {
+    flex-wrap: wrap;
+}
+
 section#content #products-table tr:nth-child(2n) {
     background-color: var(--lightgray-color);
 }
@@ -158,6 +171,11 @@ section#content #products-table img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+#products-table th:nth-child(2),
+#products-table td:nth-child(2) {
+    width: max-content;
 }
 
 #products-table th:nth-child(5),

@@ -4,7 +4,7 @@ $result = mysqli_query($db, $query);
 $row = mysqli_fetch_assoc($result);
 ?>
 
-<h1>Account Details</h1>
+<h1 id="contents-text">Account Details</h1>
 <div id="account-details">
     <table>
         <tr>

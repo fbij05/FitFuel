@@ -7,7 +7,7 @@ $query = "SELECT orders.*, users.full_name
 $result = mysqli_query($db, $query);
 ?>
 
-<h1>Orders</h1>
+<h1 id="contents-text">Orders</h1>
 
 <div>
     <table id="orders-table">

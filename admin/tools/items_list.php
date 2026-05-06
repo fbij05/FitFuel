@@ -61,7 +61,7 @@ while ($cat = mysqli_fetch_assoc($categories_result)) {
     <table id="products-table">
         <thead>
         <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Image</th>
             <th>Name</th>
             <th>Category</th>
