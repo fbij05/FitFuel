@@ -44,7 +44,7 @@ $query = mysqli_query($db, "SELECT * FROM products");
             </div>
 
             <div class="cart_button">
-                <a href="#" class="btn_cart">Proceed to checkout</a>
+                <a href="checkout.php" class="btn_cart">Proceed to checkout</a>
                 <button class="btn_cart tranc_bg">Shop more</button>
             </div>
 

@@ -133,7 +133,7 @@ $product = mysqli_fetch_assoc($query);
                 <!-- checkout -->
                 <div class="checkout-button-container">
 
-                    <a href="checkout.html" class="btn_cart">
+                    <a href="checkout.php" class="btn_cart">
                         Proceed to Checkout
                     </a>
 
