@@ -32,18 +32,7 @@ $query = mysqli_query($db, "SELECT * FROM products");
 
         <div class="items_in_cart">
 
-            <div class="cart_item">
-                <img src="img/whey.jpg" alt="">
-
-                <div class="content">
-                    <h4>Whey Protein Powder</h4>
-                    <p class="cart_price">SAR 250</p>
-                </div>
-
-                <button class="delet_item">
-                    <i class="fa-solid fa-trash-can"></i>
-                </button>
-            </div>
+            
 
         </div>
 
@@ -85,6 +74,15 @@ $query = mysqli_query($db, "SELECT * FROM products");
                     <span class="rating">
                         <?php echo $row['rating']; ?>
                     </span>
+
+                    <button 
+                        class="add_cart"
+                        data-name="<?php echo $row['name']; ?>"
+                        data-price="<?php echo $row['price']; ?>"
+                        data-image="<?php echo $row['image']; ?>"
+                    >
+                        Add to Cart
+                    </button>
 
                 </div>
 
