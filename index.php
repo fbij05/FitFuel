@@ -23,8 +23,10 @@ $query = mysqli_query($db, "SELECT * FROM products");
     <?php include "includes/header.html" ?>
 
     <div class="cart">
+
         <div class="top_cart">
             <h3>My Cart <span>(0 Item in Cart)</span></h3>
+
             <span onclick="close_cart()" class="close_cart">
                 <i class="fa-solid fa-x"></i>
             </span>
@@ -32,15 +34,13 @@ $query = mysqli_query($db, "SELECT * FROM products");
 
         <div class="items_in_cart">
 
-            
-
         </div>
 
         <div class="bottom_cart">
 
             <div class="total">
                 <p>Cart subtotal</p>
-                <p class="price_cart_total">$0</p>
+                <p class="price_cart_total">SAR 0</p>
             </div>
 
             <div class="cart_button">
@@ -49,6 +49,7 @@ $query = mysqli_query($db, "SELECT * FROM products");
             </div>
 
         </div>
+
     </div>
 
     <main id="product-list">
@@ -57,34 +58,38 @@ $query = mysqli_query($db, "SELECT * FROM products");
 
             <div class="product-item">
 
-                <div class="images">
-                    <img src="<?php echo $row['image']; ?>" alt="">
-                </div>
+                <a href='<?php echo "/fitfule/product.php?id=" . $row["product_id"]; ?>' class="product_link">
 
-                <div class="metadata">
+                    <div class="images">
+                        <img src="<?php echo $row['image']; ?>" alt="">
+                    </div>
 
-                    <span class="name">
-                        <?php echo $row['name']; ?>
-                    </span>
+                    <div class="metadata">
 
-                    <span class="price">
-                        SAR <?php echo $row['price']; ?>
-                    </span>
+                        <span class="name">
+                            <?php echo $row['name']; ?>
+                        </span>
 
-                    <span class="rating">
-                        <?php echo $row['rating']; ?>
-                    </span>
+                        <span class="price">
+                            SAR <?php echo $row['price']; ?>
+                        </span>
 
-                    <button 
-                        class="add_cart"
-                        data-name="<?php echo $row['name']; ?>"
-                        data-price="<?php echo $row['price']; ?>"
-                        data-image="<?php echo $row['image']; ?>"
-                    >
-                        Add to Cart
-                    </button>
+                        <span class="rating">
+                            <?php echo $row['rating']; ?>
+                        </span>
 
-                </div>
+                    </div>
+
+                </a>
+
+                <button 
+                    class="add_cart"
+                    data-name="<?php echo $row['name']; ?>"
+                    data-price="<?php echo $row['price']; ?>"
+                    data-image="<?php echo $row['image']; ?>"
+                >
+                    Add to Cart
+                </button>
 
             </div>
 
