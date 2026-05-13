@@ -642,3 +642,8 @@ h2 {
     padding: 12px 25px;
     display: inline-block;
 }
+
+.product_name_link{
+    text-decoration: none;
+    color: inherit;
+}
