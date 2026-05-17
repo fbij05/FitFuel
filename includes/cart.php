@@ -21,7 +21,7 @@
 
         <div class="cart_button">
             <a href="checkout.php" class="btn_cart">Proceed to checkout</a>
-            <button class="btn_cart tranc_bg">Shop more</button>
+            <a href="index.php" class="btn_cart">Shop more</a>
         </div>
 
     </div>
