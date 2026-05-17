@@ -25,7 +25,7 @@
     </a>
 
     <button
-        class="btn-add-to-cart add-cart"
+        class="btn-add-to-cart add_cart"
         data-id="<?php echo $row['product_id']; ?>"
         data-name="<?php echo $row['name']; ?>"
         data-price="<?php echo $row['price']; ?>"
