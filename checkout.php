@@ -119,7 +119,7 @@ function displayCheckoutItems(){
 
         <div class="cart-item">
 
-            <img src="${item.image}" alt="">
+            <img src="img/${item.image}" alt="">
 
             <div class="cart-item-info">
 
