@@ -366,7 +366,7 @@ header .links .login_signup a{
     cursor: pointer;
 }
 
-#product-list .product-item:hover {
+#product-list .product-item .images:hover {
     transform: scale(1.05);
 }
 
