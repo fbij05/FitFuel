@@ -1,11 +1,9 @@
 <?php
+require "admin/tools/db.php";
 
-include "admin/tools/db.php";
 $id = $_GET['id'];
 $query = mysqli_query($db, "SELECT * FROM products WHERE product_id = $id");
 $product = mysqli_fetch_assoc($query);
-
-
 
 ?>
 
