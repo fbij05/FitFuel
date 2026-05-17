@@ -1,3 +1,14 @@
+<?php
+
+include "admin/tools/db.php";
+$id = $_GET['id'];
+$query = mysqli_query($db, "SELECT * FROM products WHERE product_id = $id");
+$product = mysqli_fetch_assoc($query);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,19 +22,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-
-<?php
-
-include "admin/tools/db.php";
-
-$id = $_GET['id'];
-
-$query = mysqli_query($db, "SELECT * FROM products WHERE product_id = $id");
-
-$product = mysqli_fetch_assoc($query);
-
-?>
-
 <body>
 
 <header>
@@ -66,7 +64,7 @@ $product = mysqli_fetch_assoc($query);
 
             <div class="product-image">
 
-                <img src="img/<?php echo $product['image']; ?>" alt="">
+                <img src="img/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
 
             </div>
 

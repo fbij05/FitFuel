@@ -1,3 +1,9 @@
+<?php
+require "admin/tools/db.php";
+
+$query = mysqli_query($db, "SELECT * FROM products");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
-<?php
-include "admin/tools/db.php";
-
-$query = mysqli_query($db, "SELECT * FROM products");
-?>
-
 <body>
 
     <?php include "includes/header.html" ?>
-
     <?php require "includes/cart.php" ?>
 
     <main id="product-list">
@@ -33,7 +32,7 @@ $query = mysqli_query($db, "SELECT * FROM products");
                 <a href='product.php?id=<?php echo $row["product_id"]; ?>' class="product_link">
 
                     <div class="images">
-                        <img src="img/<?php echo $row['image']; ?>" alt="">
+                        <img src="img/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
                     </div>
 
                     <div class="metadata">
