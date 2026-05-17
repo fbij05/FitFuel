@@ -22,50 +22,27 @@ $query = mysqli_query($db, "SELECT * FROM products");
 
     <?php include "includes/header.html" ?>
     <?php require "includes/cart.php" ?>
+    <h1 style="text-align: center; margin-top: 1em;">Try this out!</h1>
 
-    <main id="product-list">
+    <main id="product-list" style="justify-content: center">
+        <?php
+        $result = $db->query("
+        SELECT * FROM products
+        ORDER BY RAND()
+        LIMIT 3
+    ");
+        if ($result && $result->num_rows > 0):
+            while ($row = $result->fetch_assoc()):
 
-        <?php while($row = mysqli_fetch_assoc($query)) { ?>
 
-            <div class="product-item">
+                include "includes/item.php";
 
-                <a href='product.php?id=<?php echo $row["product_id"]; ?>' class="product_link">
 
-                    <div class="images">
-                        <img src="img/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
-                    </div>
-
-                    <div class="metadata">
-
-                        <span class="name">
-                            <?php echo $row['name']; ?>
-                        </span>
-
-                        <span class="price">
-                            SAR <?php echo $row['price']; ?>
-                        </span>
-
-                        <span class="rating">
-                            <?php echo $row['rating']; ?>
-                        </span>
-
-                    </div>
-
-                </a>
-
-                <button 
-                    class="add_cart"
-                    data-name="<?php echo $row['name']; ?>"
-                    data-price="<?php echo $row['price']; ?>"
-                    data-image="<?php echo $row['image']; ?>"
-                >
-                    Add to Cart
-                </button>
-
-            </div>
-
-        <?php } ?>
-
+            endwhile;
+        else:
+            echo '<p>No products found.</p>';
+        endif;
+        ?>
     </main>
 
     <script src="js/main.js"></script>
