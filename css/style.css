@@ -412,13 +412,15 @@ body {
 .product-detail-container {
     display: flex;
     justify-content: center;
-    margin-top: 200px;
+    padding: 2em 0;
 }
 
 .product-detail {
     display: flex;
     gap: 30px;
     width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .product-image img {
@@ -433,6 +435,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
 .product-name {
