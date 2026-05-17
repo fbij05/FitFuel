@@ -17,7 +17,7 @@
     <style>
         #contact {
             max-width: 1000px;
-            margin: 12em auto;
+            margin: 1em auto;
 
             h1 {
                 text-align: center;
