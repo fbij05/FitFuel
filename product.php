@@ -98,7 +98,7 @@ $product = mysqli_fetch_assoc($query);
 
             <div class="product-image">
 
-                <img src="<?php echo $product['image']; ?>" alt="">
+                <img src="img/<?php echo $product['image']; ?>" alt="">
 
             </div>
 

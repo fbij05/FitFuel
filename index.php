@@ -61,7 +61,7 @@ $query = mysqli_query($db, "SELECT * FROM products");
                 <a href='<?php echo "/fitfule/product.php?id=" . $row["product_id"]; ?>' class="product_link">
 
                     <div class="images">
-                        <img src="<?php echo $row['image']; ?>" alt="">
+                        <img src="img/<?php echo $row['image']; ?>" alt="">
                     </div>
 
                     <div class="metadata">
