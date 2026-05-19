@@ -20,8 +20,7 @@ $query = mysqli_query($db, "SELECT * FROM products");
 
 <body>
 
-    <?php include "includes/header.html" ?>
-    <?php require "includes/cart.php" ?>
+    <?php include "includes/header.php" ?>
     <h1 style="text-align: center; margin-top: 1em;">Try this out!</h1>
 
     <main id="product-list" style="justify-content: center">
@@ -46,7 +45,6 @@ $query = mysqli_query($db, "SELECT * FROM products");
     </main>
     <?php include "includes/footer.html" ?>
 
-    <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -31,3 +31,4 @@
         </div>
     </nav>
 </header>
+<?php include "cart.php"?>

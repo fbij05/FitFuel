@@ -48,9 +48,7 @@
 </head>
 <body>
 
-<?php include "includes/header.html" ?>
-<?php include "includes/cart.php" ?>
-
+<?php include "includes/header.php" ?>
 
 <main id="contact">
     <h1>Contact Us!</h1>
@@ -80,6 +78,5 @@
     </address>
 </main>
 <?php include "includes/footer.html" ?>
-<script src="js/main.js"></script>
 </body>
 </html>

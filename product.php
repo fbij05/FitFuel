@@ -22,12 +22,7 @@ $product = mysqli_fetch_assoc($query);
 </head>
 <body>
 
-<?php include "includes/header.html"?>
-
-
-<!-- cart -->
-<?php require "includes/cart.php"?>
-
+<?php include "includes/header.php" ?>
 
 <main>
 
@@ -87,7 +82,6 @@ $product = mysqli_fetch_assoc($query);
 </main>
 <?php include "includes/footer.html" ?>
 
-<script src="js/main.js"></script>
 
 </body>
 </html>
