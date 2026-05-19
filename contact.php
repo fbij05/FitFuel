@@ -31,6 +31,19 @@
             justify-content: left;
             align-items: center;
         }
+        .details {
+            padding: 0 1em;
+        }
+        iframe {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: 800px) {
+            address {
+                flex-direction: column;
+            }
+
+        }
     </style>
 </head>
 <body>
