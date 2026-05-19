@@ -346,6 +346,18 @@ header .links .login_signup a{
 
 #product-list .product-item .metadata .rating {
     grid-area: rating;
+
+}
+
+#product-list .product-item .metadata,
+#product-list .product-item .metadata:link,
+#product-list .product-item .metadata:visited{
+
+    color: var(--dark-color);
+}
+
+#product-list .product-item:hover .metadata {
+    color: var(--main-color);
 }
 
 #product-list .product-item .metadata .rating::before {
