@@ -129,6 +129,7 @@ header .links ul{
     display: flex;
     gap: 70px;
 }
+
 header .links ul li a{
     color: var(--dark-color);
     text-transform: uppercase;
@@ -166,6 +167,22 @@ header .links ul li:hover::after{
 
 .login_signup a i {
     margin-right: 0.5em;
+}
+
+@media screen and (max-width: 800px) {
+    .container.links {
+        margin: 0;
+        width: 100%;
+    }
+    .links ul {
+        width: 100%;
+        overflow-x: scroll;
+        padding: 0 2em;
+
+    }
+    .links ul li {
+        flex-shrink: 0;
+    }
 }
 
 /*end of the heder*/
