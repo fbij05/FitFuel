@@ -103,6 +103,7 @@
         </div>
     </address>
 </main>
+<?php include "includes/footer.html" ?>
 
 </body>
 </html>

@@ -22,32 +22,7 @@ $product = mysqli_fetch_assoc($query);
 </head>
 <body>
 
-<header>
-
-    <div class="container top-nav">
-
-        <a href="index.php" class="logo">
-            <img src="img/logo.png" alt="Logo">
-        </a>
-
-        <form action="" class="search">
-            <input type="search" placeholder="Search for products...">
-            <button type="submit">Search</button>
-        </form>
-
-        <div class="cart_header">
-
-            <div onclick="open_cart()" class="icon_cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                <span class="count_item">0</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</header>
+<?php include "includes/header.html"?>
 
 
 <!-- cart -->
@@ -110,6 +85,7 @@ $product = mysqli_fetch_assoc($query);
     </div>
 
 </main>
+<?php include "includes/footer.html" ?>
 
 <script src="js/main.js"></script>
 

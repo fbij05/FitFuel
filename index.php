@@ -44,6 +44,7 @@ $query = mysqli_query($db, "SELECT * FROM products");
         endif;
         ?>
     </main>
+    <?php include "includes/footer.html" ?>
 
     <script src="js/main.js"></script>
 
