@@ -157,6 +157,7 @@ header .links .login_signup a{
     background-color: var(--white-color);
     margin-left: 10px;
     border-radius: 5px;
+    white-space: nowrap;
 }
 
 /*end of the heder*/
