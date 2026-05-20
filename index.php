@@ -22,6 +22,23 @@ $query = mysqli_query($db, "SELECT * FROM products");
 
     <?php include "includes/header.html" ?>
     <?php require "includes/cart.php" ?>
+
+    <!-- past purchase cookie -->
+    <?php
+
+    if(isset($_COOKIE["past_purchase"])){
+
+        echo '
+        <div class="past-purchase">
+            Last Purchase:
+            ' . $_COOKIE["past_purchase"] . '
+        </div>
+        ';
+
+    }
+
+    ?>
+    
     <h1 style="text-align: center; margin-top: 1em;">Try this out!</h1>
 
     <main id="product-list" style="justify-content: center">

@@ -150,13 +150,36 @@ if(isset($_POST["confirm_payment"])){
     // save invoice session //
     $_SESSION["invoice_order_id"] = $order_id;
 
+    // save past purchase cookie //
 
-    // redirect //
-    header("Location: invoice.php");
+    $product_names = [];
 
-    exit();
+    $cart = json_decode($_POST["cart_data"], true);
 
-}
+    foreach($cart as $item){
+
+        $product_names[] =
+        $item["name"] . " x" . $item["quantity"];
+
+    }
+
+
+    $purchase_data =
+    implode(", ", $product_names);
+
+        setcookie(
+        "past_purchase",
+        $purchase_data,
+        time() + (86400 * 30),
+        "/"
+        );
+
+        // redirect //
+        header("Location: invoice.php");
+
+        exit();
+
+    }
 
 ?>
 
