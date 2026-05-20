@@ -2,8 +2,11 @@
     <div class="container top-nav">
         <a href="index.php" class="logo"><img src="img/logo.png" alt=""></a>
 
-        <form action="" class="search" hidden="">
-            <input type="search" placeholder="Search for a products...">
+        <form action="products.php" method="GET" class="search" >
+
+            <input type="search"
+             name="search"
+             placeholder="Search for a products...">
             <button type="submit">Search</button>
 
         </form>
