@@ -1058,3 +1058,84 @@ h2 {
     font-weight: bold;
     cursor: not-allowed;
 }
+
+
+    /* Validate and any JS */
+@media (max-width: 768px){
+
+    /* top nav */
+    header .top-nav{
+ 
+     display: flex;
+
+     flex-direction: column;
+
+     align-items: center;
+
+    }
+
+
+    /* search */
+    header .top-nav .search{
+
+        width: 100%;
+
+    }
+
+
+    /* search button */
+    header .top-nav .search button{
+
+        width: 120px;
+
+        font-size: 14px;
+
+    }
+
+
+    /* products */
+    #product-list{
+  
+     display: flex;
+
+     flex-direction: column;
+
+     align-items: center;
+
+     gap: 20px;
+
+    }
+
+
+    /* product card */
+    .product-item{
+
+     width: 90% !important;
+
+    }
+
+
+    /* checkout */
+    .checkout-container{
+
+        flex-direction: column;
+
+    }
+
+
+    /* payment page */
+    .payment-page{
+
+        padding: 15px;
+
+    }
+
+
+    /* invoice */
+    .invoice-box{
+
+        width: 100%;
+
+    }
+
+}
