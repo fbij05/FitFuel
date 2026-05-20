@@ -52,148 +52,56 @@
 
             <h3>Shipping Address</h3>
 
-            <form>
+            <form action="payment.php" method="POST">
 
-                <input type="text" placeholder="Full Name" required>
+                <input type="text" name="full_name" placeholder="Full Name" required>
 
-                <input type="text" placeholder="Street Address" required>
+                <input type="email" name="email" placeholder="Email" required>
 
-                <input type="text" placeholder="City" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
 
-                <input type="text" placeholder="State/Province" required>
+                <input type="text" name="address" placeholder="Street Address" required>
 
-                <input type="text" placeholder="Postal Code" required>
+                <input type="text" name="city" placeholder="City" required>
 
-                <input type="text" placeholder="Country" required>
+                <input type="text" name="state" placeholder="State/Province" required>
+
+                <input type="text" name="postal_code" placeholder="Postal Code" required>
+
+                <input type="text" name="country" placeholder="Country" required>
+
+                <!-- buttons -->
+                <div class="actions">
+
+                    <button type="button"  class="delete-all-btn" id="delete_all">
+                       Delete All
+                    </button>
+
+                    <input type="hidden" name="total_amount" id="checkout_total_hidden">
+
+                    <input type="hidden"
+                        name="cart_data"
+                        id="cart_data_input">
+
+                    <button type="submit" class="buy-btn">
+                        Buy Now
+                    </button>
+
+                </div>
 
             </form>
 
         </div>
 
 
-        <!-- buttons -->
-        <div class="actions">
-
-            <button class="delete-all-btn" id="delete_all">
-                Delete All
-            </button>
-
-            <a href="payment.html" class="buy-btn">
-                Buy Now
-            </a>
-
-        </div>
+        
 
     </div>
 
 </main>
 
 
-<script>
-
-const checkoutContainer = document.getElementById("checkout_items");
-
-const subtotalPrice = document.getElementById("subtotal_price");
-
-const totalPrice = document.getElementById("total_price");
-
-const deleteAllBtn = document.getElementById("delete_all");
-
-
-// get cart items //
-let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-
-
-// display checkout items //
-function displayCheckoutItems(){
-
-    checkoutContainer.innerHTML = "";
-
-    let subtotal = 0;
-
-    cartItems.forEach(item => {
-
-        subtotal += item.price;
-
-        checkoutContainer.innerHTML += `
-
-        <div class="cart-item">
-
-            <img src="${item.image}" alt="">
-
-            <div class="cart-item-info">
-
-                <h4>${item.name}</h4>
-
-                <p class="cart-price">
-                    SAR ${item.price}
-                </p>
-
-                <p class="total-price">
-                    Total: SAR ${item.price}
-                </p>
-
-                <button class="delete-btn" data-name="${item.name}">
-                    Delete
-                </button>
-
-            </div>
-
-        </div>
-
-        `;
-
-    });
-
-    subtotalPrice.innerText = "SAR " + subtotal;
-
-    totalPrice.innerText = "SAR " + (subtotal + 20);
-
-    updateDeleteButtons();
-
-}
-
-
-// delete item //
-function updateDeleteButtons(){
-
-    const deleteButtons = document.querySelectorAll(".delete-btn");
-
-    deleteButtons.forEach(button => {
-
-        button.onclick = () => {
-
-            const name = button.dataset.name;
-
-            cartItems = cartItems.filter(item => item.name !== name);
-
-            localStorage.setItem("cart", JSON.stringify(cartItems));
-
-            displayCheckoutItems();
-
-        };
-
-    });
-
-}
-
-
-// delete all //
-deleteAllBtn.onclick = () => {
-
-    cartItems = [];
-
-    localStorage.removeItem("cart");
-
-    displayCheckoutItems();
-
-};
-
-
-// first load //
-displayCheckoutItems();
-
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

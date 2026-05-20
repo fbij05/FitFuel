@@ -1,3 +1,9 @@
+<?php
+require "admin/tools/db.php";
+
+$query = mysqli_query($db, "SELECT * FROM products");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,89 +18,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
-<?php
-include "admin/tools/db.php";
-
-$query = mysqli_query($db, "SELECT * FROM products");
-?>
-
 <body>
 
     <?php include "includes/header.html" ?>
+    <?php require "includes/cart.php" ?>
+    <h1 style="text-align: center; margin-top: 1em;">Try this out!</h1>
 
-    <div class="cart">
+    <main id="product-list" style="justify-content: center">
+        <?php
+        $result = $db->query("
+        SELECT * FROM products
+        ORDER BY RAND()
+        LIMIT 3
+    ");
+        if ($result && $result->num_rows > 0):
+            while ($row = $result->fetch_assoc()):
 
-        <div class="top_cart">
-            <h3>My Cart <span>(0 Item in Cart)</span></h3>
 
-            <span onclick="close_cart()" class="close_cart">
-                <i class="fa-solid fa-x"></i>
-            </span>
-        </div>
+                include "includes/item.php";
 
-        <div class="items_in_cart">
 
-        </div>
-
-        <div class="bottom_cart">
-
-            <div class="total">
-                <p>Cart subtotal</p>
-                <p class="price_cart_total">SAR 0</p>
-            </div>
-
-            <div class="cart_button">
-                <a href="checkout.php" class="btn_cart">Proceed to checkout</a>
-                <button class="btn_cart tranc_bg">Shop more</button>
-            </div>
-
-        </div>
-
-    </div>
-
-    <main id="product-list">
-
-        <?php while($row = mysqli_fetch_assoc($query)) { ?>
-
-            <div class="product-item">
-
-                <a href='<?php echo "/fitfule/product.php?id=" . $row["product_id"]; ?>' class="product_link">
-
-                    <div class="images">
-                        <img src="<?php echo $row['image']; ?>" alt="">
-                    </div>
-
-                    <div class="metadata">
-
-                        <span class="name">
-                            <?php echo $row['name']; ?>
-                        </span>
-
-                        <span class="price">
-                            SAR <?php echo $row['price']; ?>
-                        </span>
-
-                        <span class="rating">
-                            <?php echo $row['rating']; ?>
-                        </span>
-
-                    </div>
-
-                </a>
-
-                <button 
-                    class="add_cart"
-                    data-name="<?php echo $row['name']; ?>"
-                    data-price="<?php echo $row['price']; ?>"
-                    data-image="<?php echo $row['image']; ?>"
-                >
-                    Add to Cart
-                </button>
-
-            </div>
-
-        <?php } ?>
-
+            endwhile;
+        else:
+            echo '<p>No products found.</p>';
+        endif;
+        ?>
     </main>
 
     <script src="js/main.js"></script>
