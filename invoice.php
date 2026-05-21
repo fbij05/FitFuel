@@ -48,7 +48,7 @@ $order = mysqli_fetch_assoc($query);
 
 <body>
 
-<?php include "includes/header.html" ?>
+<?php include "includes/header.php" ?>
 
 
 

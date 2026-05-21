@@ -41,7 +41,7 @@
 
 <body>
 
-    <?php include "includes/header.html" ?>
+    <?php include "includes/header.php" ?>
 
     <?php require "includes/cart.php" ?>
     <h1 style="text-align: center; margin-top: 1em;">Check out what we have!</h1>

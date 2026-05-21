@@ -41,8 +41,7 @@ if(isset($_POST["confirm_payment"])){
     $status = "Pending";
 
 
-    // always use checkout customer data //
-
+    // customer data //
     $full_name = $checkout["full_name"];
 
     $email = $checkout["email"];
@@ -58,6 +57,30 @@ if(isset($_POST["confirm_payment"])){
     $postal_code = $checkout["postal_code"];
 
     $country = $checkout["country"];
+
+
+    // update logged in user data //
+    if(isset($_SESSION["user_id"])){
+
+        $session_user_id = $_SESSION["user_id"];
+
+        mysqli_query(
+            $db,
+            "UPDATE users SET
+
+            full_name='$full_name',
+            email='$email',
+            phone='$phone',
+            address='$address',
+            city='$city',
+            state='$state',
+            postal_code='$postal_code',
+            country='$country'
+
+            WHERE user_id='$session_user_id'"
+        );
+
+    }
 
 
     // full address //
@@ -150,8 +173,8 @@ if(isset($_POST["confirm_payment"])){
     // save invoice session //
     $_SESSION["invoice_order_id"] = $order_id;
 
-    // save past purchase cookie //
 
+    // save past purchase cookie //
     $product_names = [];
 
     $cart = json_decode($_POST["cart_data"], true);
@@ -167,19 +190,36 @@ if(isset($_POST["confirm_payment"])){
     $purchase_data =
     implode(", ", $product_names);
 
+
+   // save user-specific purchase cookie //
+
+    if(isset($_SESSION["user_id"])){
+
+        $cookie_name =
+        "past_purchase_" . $_SESSION["user_id"];
+
+
         setcookie(
-        "past_purchase",
-        $purchase_data,
-        time() + (86400 * 30),
-        "/"
+
+            $cookie_name,
+
+            $purchase_data,
+
+            time() + (86400 * 30),
+
+            "/"
+
         );
 
-        // redirect //
-        header("Location: invoice.php");
-
-        exit();
-
     }
+
+
+    // redirect //
+    header("Location: invoice.php");
+
+    exit();
+
+}
 
 ?>
 
@@ -203,7 +243,7 @@ if(isset($_POST["confirm_payment"])){
 
 <body>
 
-<?php include "includes/header.html" ?>
+<?php include "includes/header.php" ?>
 
 <div class="container payment-page">
 

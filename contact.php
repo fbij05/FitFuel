@@ -35,7 +35,7 @@
 </head>
 <body>
 
-<?php include "includes/header.html" ?>
+<?php include "includes/header.php" ?>
 
 <div class="cart">
     <div class="top_cart">

@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM admin_login_view WHERE admin_id='$_SESSION[user_id]'";
+$query = "SELECT * FROM admin_login_view WHERE admin_id='$_SESSION[admin_id]'";
 $result = mysqli_query($db, $query);
 $row = mysqli_fetch_assoc($result);
 ?>

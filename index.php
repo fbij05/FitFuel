@@ -20,20 +20,34 @@ $query = mysqli_query($db, "SELECT * FROM products");
 
 <body>
 
-    <?php include "includes/header.html" ?>
+    <?php include "includes/header.php" ?>
     <?php require "includes/cart.php" ?>
 
     <!-- past purchase cookie -->
+
     <?php
 
-    if(isset($_COOKIE["past_purchase"])){
+    if(isset($_SESSION["user_id"])){
 
-        echo '
-        <div class="past-purchase">
-            Last Purchase:
-            ' . $_COOKIE["past_purchase"] . '
-        </div>
-        ';
+        $cookie_name =
+        "past_purchase_" . $_SESSION["user_id"];
+
+
+        if(isset($_COOKIE[$cookie_name])){
+
+            echo '
+
+            <div class="past-purchase">
+
+                Last Purchase:
+
+                ' . $_COOKIE[$cookie_name] . '
+
+            </div>
+
+            ';
+
+        }
 
     }
 
