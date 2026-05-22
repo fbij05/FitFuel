@@ -19,6 +19,45 @@
 
 <?php include "includes/header.php" ?>
 
+<div class="cart">
+    <div class="top_cart">
+        <h3>My Cart <span>(oItem in Cart)</span></h3>
+        <span onclick="close_cart()" class="close_cart"><i class="fa-solid fa-x"></i></span>
+    </div>
+
+    <div class="items_in_cart">
+        <div class="cart_item">
+            <img src="img/whey protein powder.jpg" alt="">
+            <div class="content">
+                <h4>Whey Protein Powder</h4>
+                <p class="cart_price">SAR 250</p>
+            </div>
+            <BUtton class="delet_item"><i class="fa-solid fa-trash-can"></i></BUtton>
+        </div>
+
+        <div class="cart_item">
+            <img src="img/Proteína.jpg" alt="">
+            <div class="content">
+                <h4>ISO100 Hydrolyzed</h4>
+                <p class="cart_price">SAR 260</p>
+            </div>
+            <BUtton class="delet_item"><i class="fa-solid fa-trash-can"></i></BUtton>
+        </div>
+    </div>
+
+    <div class="bottom_cart">
+        <div class="total">
+            <p>Cart subtotal</p>
+            <p class="price_cart_total">$0</p>
+        </div>
+
+        <div class="cart_button">
+            <a href="#" class="btn_cart">Proceed to checkout</a>
+            <button class="btn_cart tranc_bg">Shop more</button>
+        </div>
+    </div>
+</div>
+
 <main id="product-list">
     <section class="about">
         <h2>About Us</h2>
@@ -31,6 +70,6 @@
         </span>
     </section>
 </main>
-<?php include "includes/footer.html" ?>
+
 </body>
 </html>

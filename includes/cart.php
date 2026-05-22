@@ -21,10 +21,9 @@
 
         <div class="cart_button">
             <a href="checkout.php" class="btn_cart">Proceed to checkout</a>
-            <a href="index.php" class="btn_cart">Shop more</a>
+            <a href="products.php" class="btn_cart">Shop more</a>
         </div>
 
     </div>
-    <script src="js/main.js"></script>
 
 </div>

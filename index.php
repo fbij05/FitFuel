@@ -21,6 +21,38 @@ $query = mysqli_query($db, "SELECT * FROM products");
 <body>
 
     <?php include "includes/header.php" ?>
+    <?php require "includes/cart.php" ?>
+
+    <!-- past purchase cookie -->
+
+    <?php
+
+    if(isset($_SESSION["user_id"])){
+
+        $cookie_name =
+        "past_purchase_" . $_SESSION["user_id"];
+
+
+        if(isset($_COOKIE[$cookie_name])){
+
+            echo '
+
+            <div class="past-purchase">
+
+                Last Purchase:
+
+                ' . $_COOKIE[$cookie_name] . '
+
+            </div>
+
+            ';
+
+        }
+
+    }
+
+    ?>
+    
     <h1 style="text-align: center; margin-top: 1em;">Try this out!</h1>
 
     <main id="product-list" style="justify-content: center">
@@ -43,8 +75,8 @@ $query = mysqli_query($db, "SELECT * FROM products");
         endif;
         ?>
     </main>
-    <?php include "includes/footer.html" ?>
 
+    <script src="js/main.js"></script>
 
 </body>
 </html>

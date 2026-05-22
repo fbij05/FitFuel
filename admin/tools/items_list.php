@@ -85,7 +85,7 @@ while ($cat = mysqli_fetch_assoc($categories_result)) {
                     data-rating="<?= $row["rating"] ?>"
                     data-image="<?= htmlspecialchars($row["image"]) ?>">
                     <td><?= $row["product_id"] ?></td>
-                    <td><img src="../../img/<?= htmlspecialchars($row["image"]) ?>" width="60"></td>
+                    <td><img src="../img/<?= htmlspecialchars($row["image"]) ?>" width="60"></td>
                     <td><?= htmlspecialchars($row["name"]) ?></td>
                     <td><?= htmlspecialchars($row["category_name"]) ?></td>
                     <td><?= htmlspecialchars($row["description"]) ?></td>

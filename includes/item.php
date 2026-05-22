@@ -1,4 +1,4 @@
-<div class="product-item">
+<div class="product-item <?php if($row['stock'] <= 0){ echo 'sold-out'; } ?>">
 
     <a href='product.php?id=<?php echo $row["product_id"]; ?>' class="product_link">
 
@@ -24,15 +24,30 @@
 
     </a>
 
-    <button
-        class="btn-add-to-cart add_cart"
-        data-id="<?php echo $row['product_id']; ?>"
-        data-name="<?php echo $row['name']; ?>"
-        data-price="<?php echo $row['price']; ?>"
-        data-image="<?php echo $row['image']; ?>"
-    >
-        Add to Cart
-    </button>
+        <?php if($row['stock'] > 0){ ?>
+
+        <button
+            class="btn-add-to-cart add_cart"
+            data-id="<?php echo $row['product_id']; ?>"
+            data-name="<?php echo $row['name']; ?>"
+            data-price="<?php echo $row['price']; ?>"
+            data-image="<?php echo $row['image']; ?>"
+            data-stock="<?php echo $row['stock']; ?>"
+        >
+
+            Add to Cart
+
+        </button>
+
+    <?php }else{ ?>
+
+        <button class="sold-btn" disabled>
+
+            Out of Stock
+
+        </button>
+
+    <?php } ?>
 
 </div>
 
